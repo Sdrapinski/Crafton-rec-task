@@ -1,0 +1,35 @@
+footer {
+  background-color: $fotter-bg-color;
+  color: white;
+  padding: 10vh 10vw;
+}
+.footer__localization {
+  width: 15vw;
+}
+.footer__wrapper {
+  display: flex;
+}
+.fotter__links {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  a {
+    color: white;
+    text-decoration: none;
+  }
+  ul li {
+    font-size: 15px;
+    font-family: Muli-Regular;
+    line-height: 30px;
+  }
+  ul li:first-child {
+    font-family: Muli-ExtraBold;
+  }
+}
+.map {
+  margin-top: 20px;
+}
+.footer__projectBy {
+  width: 95%;
+  text-align: end;
+}
