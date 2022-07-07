@@ -33,18 +33,18 @@
             <h1>Będziesz się uczyć z ciekawością. <br> <span>Obiecujemy.</span></h1>
           </div>
           <div class="info__buttons">
-            <button>ZOBACZ WIĘCEJ</button>
-            <button>UMÓW SIĘ Z ANIOŁEM</button>
+            <button class="info__button1">ZOBACZ WIĘCEJ</button>
+            <button class="info__button2">UMÓW SIĘ Z ANIOŁEM</button>
           </div>
           <div class="info__nav">
-            <span><img src="./public/img/nawigacja slajdera-left.png" alt="nawigacja w lewo" /></span>
-            <span><img src="./public/img/nawigacja slajdera-right.png" alt="nawigacja w prawo" /></span>
+            <span><img src="./public/img/nawigacja slajdera-right.png" onclick="slider(-1)" class="XD" id="arrow__left" alt="nawigacja w lewo" /></span>
+            <span><img src="./public/img/nawigacja slajdera-right.png" onclick="slider(1)" id="arrow__right" alt="nawigacja w prawo" /></span>
           </div>
         </div>
         <div class="main__navigation">
-          <ul class="navigation__dots">
-            <li></li> <li></li> <li></li> <li></li>
-          </ul>
+          <div class="navigation__dots">
+            <div onclick="slider(0,0)"></div> <div onclick="slider(0,1)" ></div> <div onclick="slider(0,2)"></div> <div onclick="slider(0,3)"></div>
+          </div>
         </div>
       </div>
     </section>
@@ -137,10 +137,20 @@
       <form action="#">
       <div class="contact__form">
           <div class="form__names">
-            <input type="text" placeholder="Imię" name="" id="">
-            <input type="text" placeholder="Nazwisko" name="" id="">
+            <div class="input__wrapper">
+              <input type="text" placeholder="Imię" class="input__name" id="name">
+            <label for="name" class="form__label">Imię</label>
+            </div>
+            <div class="input__wrapper"> 
+              <input type="text" placeholder="Nazwisko" id="surname" class="input__name">
+              <label for="surname" class="form__label">Nazwisko</label>
+            </div>
+           
           </div>
-          <input type="email" placeholder="Adres e-mail" class="form__inputEmail">
+          <div class="input__wrapper--email"> 
+          <input type="email" placeholder="Adres e-mail" id="email" class="form__inputEmail">
+          <label for="email" class="form__label">Adres e-mail</label>
+          </div>
           <textarea placeholder="Treść wiadomości" class="form__textarea"  rows="10"></textarea>
       
       <div class="form__checkbox">

@@ -534,6 +534,7 @@ textarea {
 
 .sticky {
   background-color: #111111;
+  z-index: 1000;
 }
 
 .navbar__logo {
@@ -558,6 +559,10 @@ textarea {
 .navbar__links a {
   color: white;
   text-decoration: none;
+}
+
+.navbar__links a:hover {
+  border-bottom: 1px solid white;
 }
 
 .slider__main {
@@ -591,21 +596,39 @@ textarea {
 
 .info__buttons button:first-child {
   font-family: Muli-ExtraBold;
+  -webkit-transition: ease-out 0.5s;
+  transition: ease-out 0.5s;
   background-color: white;
   color: #002841;
-  padding: 16px 35px;
+  height: 50px;
+  width: 178px;
   border: none;
   border-radius: 30px;
 }
 
+.info__buttons button:first-child:hover {
+  -webkit-box-shadow: inset 178px 0 0 0 #00b6dc;
+          box-shadow: inset 178px 0 0 0 #00b6dc;
+  border: 2px solid white;
+  color: white;
+}
+
 .info__buttons button:last-child {
+  -webkit-transition: ease-out 0.5s;
+  transition: ease-out 0.5s;
   margin-left: 15px;
   font-family: Muli-ExtraBold;
   background-color: transparent;
   color: white;
-  padding: 14px 40px;
+  height: 50px;
+  width: 217px;
   border: 2px solid white;
   border-radius: 30px;
+}
+
+.info__buttons button:last-child:hover {
+  -webkit-box-shadow: inset 217px 0 0 0 #00b6dc;
+          box-shadow: inset 217px 0 0 0 #00b6dc;
 }
 
 .info__nav {
@@ -620,8 +643,35 @@ textarea {
   margin-top: 25vh;
 }
 
-.navigation__dots {
-  list-style-type: circle;
+.navigation__dots div {
+  height: 12px;
+  width: 12px;
+  border-radius: 60%;
+  background-color: white;
+  margin: 25px 0;
+  cursor: pointer;
+}
+
+#arrow__left {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+#arrow__left,
+#arrow__right {
+  cursor: pointer;
+}
+
+#arrow__left:hover {
+  content: url("../../public/img/nawigacja-slajdera-left.png");
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+
+#arrow__right:hover {
+  content: url("../../public/img/nawigacja-slajdera-left.png");
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 
 .info__article--1 {
@@ -831,6 +881,74 @@ textarea {
   border-radius: 25px;
   font-size: 14px;
   font-family: Muli-ExtraBold;
+}
+
+.form__btn:hover {
+  background-color: #0765a0;
+}
+
+.input__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  width: 26.7%;
+}
+
+.input__wrapper--email {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  width: 100%;
+}
+
+.input__wrapper input {
+  width: 100%;
+  margin: 0 10px;
+  cursor: pointer;
+  border: none;
+  background-color: white;
+  font-size: 15px;
+  font-family: Muli-SemiBold;
+  padding: 19px;
+  -webkit-box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.form__inputEmail {
+  padding: 21px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.form__label {
+  display: none;
+  position: absolute;
+}
+
+.input__name:focus ~ label {
+  color: #7b94a5;
+  font-size: 11px;
+  font-family: Muli-SemiBold;
+  display: block;
+  top: 5px;
+  left: 30px;
+}
+
+.form__inputEmail:focus ~ label {
+  color: #7b94a5;
+  font-size: 11px;
+  font-family: Muli-SemiBold;
+  display: block;
+  top: 25px;
+  left: 295px;
 }
 
 footer {

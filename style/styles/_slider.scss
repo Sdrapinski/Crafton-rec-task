@@ -18,6 +18,7 @@
 }
 .sticky {
   background-color: rgb(17, 17, 17);
+  z-index: 1000;
 }
 .navbar__logo {
   width: 40vw;
@@ -33,6 +34,9 @@
   a {
     color: white;
     text-decoration: none;
+  }
+  a:hover {
+    border-bottom: 1px solid white;
   }
 }
 .slider__main {
@@ -61,21 +65,33 @@
 }
 .info__buttons button:first-child {
   font-family: Muli-ExtraBold;
+  transition: ease-out 0.5s;
 
   background-color: white;
   color: #002841;
-  padding: 16px 35px;
+  height: 50px;
+  width: 178px;
   border: none;
   border-radius: 30px;
 }
+.info__buttons button:first-child:hover {
+  box-shadow: inset 178px 0 0 0 $H1-color;
+  border: 2px solid white;
+  color: white;
+}
 .info__buttons button:last-child {
+  transition: ease-out 0.5s;
   margin-left: 15px;
   font-family: Muli-ExtraBold;
   background-color: transparent;
   color: white;
-  padding: 14px 40px;
+  height: 50px;
+  width: 217px;
   border: 2px solid white;
   border-radius: 30px;
+}
+.info__buttons button:last-child:hover {
+  box-shadow: inset 217px 0 0 0 $H1-color;
 }
 
 .info__nav {
@@ -87,6 +103,27 @@
 .main__navigation {
   margin-top: 25vh;
 }
-.navigation__dots {
-  list-style-type: circle;
+.navigation__dots div {
+  height: 12px;
+  width: 12px;
+  border-radius: 60%;
+  background-color: white;
+  margin: 25px 0;
+  cursor: pointer;
+}
+
+#arrow__left {
+  transform: rotate(180deg);
+}
+#arrow__left,
+#arrow__right {
+  cursor: pointer;
+}
+#arrow__left:hover {
+  content: url("../../public/img/nawigacja-slajdera-left.png");
+  transform: rotate(0deg);
+}
+#arrow__right:hover {
+  content: url("../../public/img/nawigacja-slajdera-left.png");
+  transform: rotate(180deg);
 }

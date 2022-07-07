@@ -96,3 +96,53 @@
   font-size: 14px;
   font-family: Muli-ExtraBold;
 }
+.form__btn:hover {
+  background-color: #0765a0;
+}
+.input__wrapper {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 26.7%;
+}
+.input__wrapper--email {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+}
+.input__wrapper input {
+  width: 100%;
+  margin: 0 10px;
+  cursor: pointer;
+  border: none;
+  background-color: white;
+  font-size: 15px;
+  font-family: Muli-SemiBold;
+  padding: 19px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+.form__inputEmail {
+  padding: 21px;
+  box-sizing: border-box;
+}
+.form__label {
+  display: none;
+  position: absolute;
+}
+.input__name:focus ~ label {
+  color: #7b94a5;
+  font-size: 11px;
+  font-family: Muli-SemiBold;
+  display: block;
+  top: 5px;
+  left: 30px;
+}
+.form__inputEmail:focus ~ label {
+  color: #7b94a5;
+  font-size: 11px;
+  font-family: Muli-SemiBold;
+  display: block;
+  top: 25px;
+  left: 295px;
+}
