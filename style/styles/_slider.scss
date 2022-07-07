@@ -1,24 +1,32 @@
 .slider {
-  position: relative;
   color: white;
   height: 100vh;
   background-image: url("../../public/img/bg.jpg");
   background-size: cover;
+}
+.header__wrapper {
+  position: relative;
   padding: 5vh 5vw 0 13vw;
 }
 .slider__navbar {
+  top: 0;
+  left: 0;
   position: fixed;
-  height: 10vh;
-  width: 80%;
+  height: 12vh;
+  width: 100%;
   display: flex;
 }
+.sticky {
+  background-color: rgb(17, 17, 17);
+}
 .navbar__logo {
-  width: 30vw;
+  width: 40vw;
+  padding-left: 15vw;
 }
 .navbar__links {
   font-size: $navbar-font-size;
   font-family: Muli-Bold, sans-serif;
-  width: 58%;
+  width: 50%;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -28,8 +36,9 @@
   }
 }
 .slider__main {
+  padding: 15vh 5vw 0 13vw;
   width: 100%;
-  margin-top: 10%;
+
   height: 73vh;
 
   display: flex;
@@ -47,9 +56,33 @@
 }
 .info__buttons {
   margin-top: 7vh;
+  font-size: 14px;
+  font-family: Muli-ExtraBold;
 }
+.info__buttons button:first-child {
+  font-family: Muli-ExtraBold;
+
+  background-color: white;
+  color: #002841;
+  padding: 16px 35px;
+  border: none;
+  border-radius: 30px;
+}
+.info__buttons button:last-child {
+  margin-left: 15px;
+  font-family: Muli-ExtraBold;
+  background-color: transparent;
+  color: white;
+  padding: 14px 40px;
+  border: 2px solid white;
+  border-radius: 30px;
+}
+
 .info__nav {
   margin-top: 19vh;
+}
+.info__nav img:first-child {
+  margin-right: 5px;
 }
 .main__navigation {
   margin-top: 25vh;

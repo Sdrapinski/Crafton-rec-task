@@ -444,6 +444,11 @@ textarea {
   padding: 0.2em 0;
 }
 
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 @font-face {
   font-family: Muli-Bold;
   src: url("../fonts/Muli-Bold.ttf");
@@ -505,31 +510,41 @@ textarea {
 }
 
 .slider {
-  position: relative;
   color: white;
   height: 100vh;
   background-image: url("../../public/img/bg.jpg");
   background-size: cover;
+}
+
+.header__wrapper {
+  position: relative;
   padding: 5vh 5vw 0 13vw;
 }
 
 .slider__navbar {
+  top: 0;
+  left: 0;
   position: fixed;
-  height: 10vh;
-  width: 80%;
+  height: 12vh;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
+.sticky {
+  background-color: #111111;
+}
+
 .navbar__logo {
-  width: 30vw;
+  width: 40vw;
+  padding-left: 15vw;
 }
 
 .navbar__links {
   font-size: 16px;
   font-family: Muli-Bold, sans-serif;
-  width: 58%;
+  width: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -546,8 +561,8 @@ textarea {
 }
 
 .slider__main {
+  padding: 15vh 5vw 0 13vw;
   width: 100%;
-  margin-top: 10%;
   height: 73vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -570,10 +585,35 @@ textarea {
 
 .info__buttons {
   margin-top: 7vh;
+  font-size: 14px;
+  font-family: Muli-ExtraBold;
+}
+
+.info__buttons button:first-child {
+  font-family: Muli-ExtraBold;
+  background-color: white;
+  color: #002841;
+  padding: 16px 35px;
+  border: none;
+  border-radius: 30px;
+}
+
+.info__buttons button:last-child {
+  margin-left: 15px;
+  font-family: Muli-ExtraBold;
+  background-color: transparent;
+  color: white;
+  padding: 14px 40px;
+  border: 2px solid white;
+  border-radius: 30px;
 }
 
 .info__nav {
   margin-top: 19vh;
+}
+
+.info__nav img:first-child {
+  margin-right: 5px;
 }
 
 .main__navigation {
@@ -648,7 +688,6 @@ textarea {
 }
 
 .contact {
-  height: 60vh;
   background-color: #f5f8fa;
 }
 
@@ -705,6 +744,95 @@ textarea {
           align-items: center;
 }
 
+.form__names {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.form__names input {
+  width: 25%;
+  margin: 0 10px;
+  cursor: pointer;
+  border: none;
+  background-color: white;
+  font-size: 15px;
+  font-family: Muli-SemiBold;
+  padding: 15px;
+  -webkit-box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.form__names input:hover,
+.form__inputEmail:hover {
+  -webkit-box-shadow: 0px 0px 5px 0px #42445a;
+          box-shadow: 0px 0px 5px 0px #42445a;
+}
+
+.form__inputEmail {
+  width: 51.5%;
+  margin: 20px 0px;
+  cursor: pointer;
+  border: none;
+  background-color: white;
+  font-size: 15px;
+  font-family: Muli-SemiBold;
+  padding: 15px;
+  -webkit-box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.form__textarea {
+  font-family: Muli-Regular;
+  border: none;
+  padding: 15px;
+  width: 51.5%;
+  -webkit-box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  resize: none;
+}
+
+.form__checkbox {
+  margin-top: 20px;
+  width: 51.5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.form__checkbox span {
+  margin-left: 10px;
+  line-height: 16px;
+  font-size: 10px;
+  font-family: Muli-SemiBold;
+  color: #002841;
+}
+
+.form__btn {
+  margin: 20px 0 50px 0;
+  background-color: #00b6dc;
+  padding: 15px 30px;
+  border: none;
+  color: white;
+  border-radius: 25px;
+  font-size: 14px;
+  font-family: Muli-ExtraBold;
+}
+
 footer {
   background-color: #001927;
   color: white;
@@ -713,6 +841,7 @@ footer {
 
 .footer__localization {
   width: 15vw;
+  line-height: 25px;
 }
 
 .footer__wrapper {
@@ -754,4 +883,33 @@ footer {
   width: 95%;
   text-align: end;
 }
+
+/*
+body {
+  @include mq(desktop-large) {
+    
+  }
+  @include mq(desktop-medium) {
+   
+  }
+  @include mq(desktop-small) {
+  
+  }
+  @include mq(tablet-large) {
+   
+  }
+  @include mq(tablet) {
+  
+  }
+  @include mq(tablet-mini) {
+  
+  }
+  @include mq(smartphone-large) {
+   
+  }
+  @include mq(smartphone) {
+   
+  }
+}
+*/
 /*# sourceMappingURL=style.css.map */

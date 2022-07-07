@@ -13,7 +13,8 @@
   <body>
     <script defer src="./js/app.js"></script>
     <section class="slider">
-      <nav class="slider__navbar">
+      <div class="header__wrapper">
+      <header class="slider__navbar">
         <div class="navbar__logo">
           <img src="./public/img/UW-bialy.png" alt="Logo uniwersytetu" />
         </div>
@@ -24,7 +25,8 @@
           <a href="#">Szkolenia</a>
           <a href="#">Usługi</a>
         </div>
-      </nav>
+      </div>
+      </header>
       <div class="slider__main">
         <div class="main__info">
           <div class="info__statement">
@@ -135,11 +137,11 @@
       <form action="#">
       <div class="contact__form">
           <div class="form__names">
-            <input type="text" name="" id="">
-            <input type="text" name="" id="">
+            <input type="text" placeholder="Imię" name="" id="">
+            <input type="text" placeholder="Nazwisko" name="" id="">
           </div>
-          <input type="text" name="" id="">
-          <textarea name="" id="" cols="30" rows="10"></textarea>
+          <input type="email" placeholder="Adres e-mail" class="form__inputEmail">
+          <textarea placeholder="Treść wiadomości" class="form__textarea"  rows="10"></textarea>
       
       <div class="form__checkbox">
         <input type="checkbox">
@@ -151,7 +153,7 @@
         </span>
       </div>
       
-      <button type="submit">Wyslij</button>
+      <button class="form__btn" type="submit">WYŚLIJ</button>
     </div>
   </div>
 </form>

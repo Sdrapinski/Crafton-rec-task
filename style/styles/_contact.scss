@@ -1,5 +1,4 @@
 .contact {
-  height: 60vh;
   background-color: $form-bg-color;
 }
 .contact__wrapper {
@@ -31,4 +30,69 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.form__names {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.form__names input {
+  width: 25%;
+  margin: 0 10px;
+  cursor: pointer;
+  border: none;
+  background-color: white;
+  font-size: 15px;
+  font-family: Muli-SemiBold;
+  padding: 15px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+.form__names input:hover,
+.form__inputEmail:hover {
+  box-shadow: 0px 0px 5px 0px rgba(66, 68, 90, 1);
+}
+.form__inputEmail {
+  width: 51.5%;
+  margin: 20px 0px;
+  cursor: pointer;
+  border: none;
+  background-color: white;
+  font-size: 15px;
+  font-family: Muli-SemiBold;
+  padding: 15px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.form__textarea {
+  font-family: Muli-Regular;
+  border: none;
+  padding: 15px;
+  width: 51.5%;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  resize: none;
+}
+.form__checkbox {
+  margin-top: 20px;
+  width: 51.5%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  span {
+    margin-left: 10px;
+    line-height: 16px;
+    font-size: $RODO-font-size;
+    font-family: Muli-SemiBold;
+    color: #002841;
+  }
+}
+.form__btn {
+  margin: 20px 0 50px 0;
+  background-color: $H1-color;
+  padding: 15px 30px;
+  border: none;
+  color: white;
+  border-radius: 25px;
+  font-size: 14px;
+  font-family: Muli-ExtraBold;
 }
