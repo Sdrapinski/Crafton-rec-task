@@ -24,5 +24,4 @@ const slider = (value, currValue = sliderCurrentValue) => {
     slider(0);
   }
 };
-
 slider(0);

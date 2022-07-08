@@ -2,7 +2,14 @@
   color: white;
   height: 100vh;
   background-image: url("../../public/img/bg.jpg");
+  width: 99vw;
   background-size: cover;
+  overflow-x: hidden;
+}
+.container {
+  box-sizing: border-box;
+  width: 99vw;
+  overflow-x: hidden;
 }
 .header__wrapper {
   position: relative;

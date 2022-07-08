@@ -11,7 +11,9 @@
     <title>Szymon Drapiński</title>
   </head>
   <body>
-    <script defer src="./js/app.js"></script>
+    <script defer src="./js/slider.js"></script>
+    <script defer src="./js/formHandler.js"></script>
+    <div class="container">
     <section class="slider">
       <div class="header__wrapper">
       <header class="slider__navbar">
@@ -134,27 +136,27 @@
        <p> Nie znalazłeś odpowiedniego kontaktu? </p>
         <p>Skorzystaj z formularza. </p> 
       </div>
-      <form action="#">
+      <form action="#" id="form">
       <div class="contact__form">
           <div class="form__names">
             <div class="input__wrapper">
-              <input type="text" placeholder="Imię" class="input__name" id="name">
+              <input type="text" placeholder="Imię" class="input__name" id="name" autocomplete="off">
             <label for="name" class="form__label">Imię</label>
             </div>
             <div class="input__wrapper"> 
-              <input type="text" placeholder="Nazwisko" id="surname" class="input__name">
+              <input type="text" placeholder="Nazwisko" id="surname" class="input__name" autocomplete="off">
               <label for="surname" class="form__label">Nazwisko</label>
             </div>
            
           </div>
           <div class="input__wrapper--email"> 
-          <input type="email" placeholder="Adres e-mail" id="email" class="form__inputEmail">
+          <input type="email" placeholder="Adres e-mail" id="email" class="form__inputEmail" >
           <label for="email" class="form__label">Adres e-mail</label>
           </div>
-          <textarea placeholder="Treść wiadomości" class="form__textarea"  rows="10"></textarea>
+          <textarea placeholder="Treść wiadomości" class="form__textarea"  rows="10" id="textarea" ></textarea>
       
       <div class="form__checkbox">
-        <input type="checkbox">
+        <input type="checkbox" required>
         <span>
           Wyrażam zgodę na przetwarzanie moich danych osobowych w rozumieniu ustawy z dnia 29 sierpnia 1997 roku o ochronie
            danych osobowych oraz ustawy z dnia 16 lipca 2004 roku Prawo telekomunikacyjne w celach marketingowych przez Collegium
@@ -230,5 +232,6 @@
     </footer>
     <script src="./js/lity/vendor/app.js"></script>
     <script src="./js/lity/dist/lity.js"></script>
+  </div>
   </body>
 </html>

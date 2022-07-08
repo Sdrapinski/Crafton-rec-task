@@ -513,7 +513,16 @@ textarea {
   color: white;
   height: 100vh;
   background-image: url("../../public/img/bg.jpg");
+  width: 99vw;
   background-size: cover;
+  overflow-x: hidden;
+}
+
+.container {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 99vw;
+  overflow-x: hidden;
 }
 
 .header__wrapper {
@@ -949,6 +958,11 @@ textarea {
   display: block;
   top: 25px;
   left: 295px;
+}
+
+.error {
+  border: 1px solid #ff3139 !important;
+  color: #ff4148;
 }
 
 footer {
