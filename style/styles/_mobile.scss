@@ -35,6 +35,49 @@ body {
     margin: 10px 0px;
   }
 }
+.navbar__links {
+  @include mq(tablet-large) {
+    width: 90%;
+  }
+  @include mq(tablet) {
+    width: 100%;
+  }
+  @include mq(tablet-mini) {
+    position: absolute;
+    right: -100vw;
+  }
+}
+.burger {
+  @include mq(tablet-mini) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.slider__navbar {
+  @include mq(tablet-mini) {
+    height: 10vh;
+  }
+}
+.blok {
+  @include mq(tablet-mini) {
+    transition: ease-in-out 0.5s;
+    width: 150px;
+    position: absolute;
+    justify-content: space-between;
+    top: 10vh;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    height: 180px;
+    background-color: rgb(17, 17, 17);
+    padding: 10px;
+  }
+}
+.navbar__logo img {
+  @include mq(tablet-mini) {
+    height: 10vh;
+  }
+}
 
 // info
 .article__wrapper {

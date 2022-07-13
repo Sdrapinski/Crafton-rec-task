@@ -2,14 +2,12 @@
   color: white;
   height: 100vh;
   background-image: url("../../public/img/bg.jpg");
-  width: 99vw;
+  width: 100vw;
   background-size: cover;
   overflow-x: hidden;
 }
 .container {
-  box-sizing: border-box;
-  width: 99vw;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 .header__wrapper {
   position: relative;
@@ -19,9 +17,24 @@
   top: 0;
   left: 0;
   position: fixed;
-  height: 12vh;
+  height: 13vh;
   width: 100%;
   display: flex;
+}
+.burger {
+  position: absolute;
+  right: 10vw;
+  top: 3vh;
+  display: none;
+  justify-content: space-around;
+  height: 38px;
+}
+.burger div {
+  height: 5px;
+  width: 40px;
+
+  background-color: #ffffff;
+  border-radius: 10%;
 }
 .sticky {
   background-color: rgb(17, 17, 17);

@@ -514,16 +514,13 @@ textarea {
   color: white;
   height: 100vh;
   background-image: url("../../public/img/bg.jpg");
-  width: 99vw;
+  width: 100vw;
   background-size: cover;
   overflow-x: hidden;
 }
 
 .container {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  width: 99vw;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .header__wrapper {
@@ -535,11 +532,28 @@ textarea {
   top: 0;
   left: 0;
   position: fixed;
-  height: 12vh;
+  height: 13vh;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.burger {
+  position: absolute;
+  right: 10vw;
+  top: 3vh;
+  display: none;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  height: 38px;
+}
+
+.burger div {
+  height: 5px;
+  width: 40px;
+  background-color: #ffffff;
+  border-radius: 10%;
 }
 
 .sticky {
@@ -1054,6 +1068,73 @@ body {
 @media (max-width: 460px) {
   .info__buttons button:last-child {
     margin: 10px 0px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .navbar__links {
+    width: 90%;
+  }
+}
+
+@media (max-width: 800px) {
+  .navbar__links {
+    width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .navbar__links {
+    position: absolute;
+    right: -100vw;
+  }
+}
+
+@media (max-width: 640px) {
+  .burger {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media (max-width: 640px) {
+  .slider__navbar {
+    height: 10vh;
+  }
+}
+
+@media (max-width: 640px) {
+  .blok {
+    -webkit-transition: ease-in-out 0.5s;
+    transition: ease-in-out 0.5s;
+    width: 150px;
+    position: absolute;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    top: 10vh;
+    right: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 180px;
+    background-color: #111111;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 640px) {
+  .navbar__logo img {
+    height: 10vh;
   }
 }
 
