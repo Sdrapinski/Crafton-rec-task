@@ -249,6 +249,14 @@ footer {
     align-items: center;
   }
 }
+.footer__localization p {
+  @include mq(smartphone-large) {
+    font-size: 14px;
+  }
+  @include mq(smartphone) {
+    font-size: 12px;
+  }
+}
 .footer__localization {
   @include mq(desktop-small) {
     display: flex;
@@ -272,12 +280,18 @@ footer {
     flex-direction: column;
   }
 }
+.footer__links ul {
+  @include mq(tablet-mini) {
+    transition: ease-in 0.3s;
+  }
+}
 .footer__links ul li.li--vis {
   display: block;
 }
 .footer__links ul li {
   @include mq(tablet-mini) {
     display: none;
+    transition: ease-in 0.3s;
   }
 }
 .footer__links ul li.li--first {

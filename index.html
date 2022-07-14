@@ -141,27 +141,27 @@
        <p> Nie znalazłeś odpowiedniego kontaktu? </p>
         <p>Skorzystaj z formularza. </p> 
       </div>
-      <form action="#" id="form">
+      <form action="./backend/app.php" id="form">
       <div class="contact__form">
           <div class="form__names">
             <div class="input__wrapper">
-              <input type="text" placeholder="Imię" class="input__name" id="name" autocomplete="off">
+              <input type="text" placeholder="Imię" class="input__name" name="name" id="name" autocomplete="off">
             <label for="name" class="form__label">Imię</label>
             </div>
             <div class="input__wrapper"> 
-              <input type="text" placeholder="Nazwisko" id="surname" class="input__name" autocomplete="off">
+              <input type="text" placeholder="Nazwisko" id="surname" name="surname" class="input__name" autocomplete="off">
               <label for="surname" class="form__label">Nazwisko</label>
             </div>
            
           </div>
           <div class="input__wrapper--email"> 
-          <input type="email" placeholder="Adres e-mail" id="email" class="form__inputEmail" >
+          <input type="email" placeholder="Adres e-mail" name="email" id="email" class="form__inputEmail" >
           <label for="email" class="form__label">Adres e-mail</label>
           </div>
-          <textarea placeholder="Treść wiadomości" class="form__textarea"  rows="10" id="textarea" ></textarea>
+          <textarea placeholder="Treść wiadomości" name="textarea" class="form__textarea"  rows="10" id="textarea" ></textarea>
       
       <div class="form__checkbox">
-        <input type="checkbox" required>
+        <input type="checkbox" name="checkbox" required>
         <span>
           Wyrażam zgodę na przetwarzanie moich danych osobowych w rozumieniu ustawy z dnia 29 sierpnia 1997 roku o ochronie
            danych osobowych oraz ustawy z dnia 16 lipca 2004 roku Prawo telekomunikacyjne w celach marketingowych przez Collegium
